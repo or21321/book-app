@@ -1,0 +1,555 @@
+/* fonts */
+
+/* @font-face {
+    font-family: Garamond;
+    src: url('../fonts/EBGaramond-VariableFont_wght.ttf');
+} */
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    font-family: roboto, sans-serif;
+        /* can i do it here to solve list problem? */
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* a:active {
+    color: red;
+} */
+
+button:hover {
+    cursor: pointer;
+}
+
+/* home-page */
+
+.home-page {
+    /* background-color: lightskyblue; */
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.home-page h2 {
+    font-size: 3rem;
+}
+
+/* vue-app */
+
+.vue-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+}
+
+/* app-header */
+
+/* should i do it liket hat for layout? */
+
+.app-header-container {
+   background-color: #c1d9d9;
+    border-top: 1px solid #f1f3f4;
+    border-bottom: 1px solid #f1f3f4;
+    padding: 8px;
+    margin-inline-start: 3px;
+}
+
+.app-header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-header nav a {
+    /* color: black; */
+    text-decoration: none;
+    margin-inline-start: 1rem;
+}
+
+/* book-app */
+
+.book-app {
+    /* background-color: lightskyblue; */
+    display: flex;
+    flex-direction: column;
+}
+
+/* book-filter */
+
+.book-filter {
+    display: flex;
+    padding: .875rem;
+    margin-top: 20px;
+    width: 600px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    border: none;
+    box-shadow: inset 0 - 2px black;
+    -webkit-box-shadow: 0px 0px 4px 2px #F1F3F4;
+}
+
+.book-filter input{
+    border: none;
+}
+.book-filter input:focus{
+    outline: none;
+}
+
+/* book-list */
+
+.book-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.book-preview-container {
+    position: relative;
+    display: flex;
+    /* padding: 10px; */
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #efefef;
+    border-radius: 25px;
+}
+
+.book-preview-container p {
+    background-color: #c1d9d9;
+    position: absolute;
+    border-radius: 10%;
+    padding: .3rem;
+    top: -1rem;
+    right: -1rem;
+}
+
+.actions button {
+    background-color: #c1d9d9;
+    border: 0px;
+    padding: .2rem;
+    color: #534c4c;
+}
+
+.actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.actions .details-link {
+    color: #534c4c;
+    text-decoration: none;
+}
+
+/* book-preview */
+
+.book-preview {
+    display: flex;
+    flex-direction: column;
+    gap: .375rem;
+    align-items: center;
+    /* font-family: Garamond; */
+    position: relative;
+}
+
+.book-preview img {
+    /* not perfect but.. */
+    height: 204px;
+}
+
+.book-preview h3 {
+    color:#363131;
+    font-size: 1.5rem;
+    text-align: center;
+    height: 4rem;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 1.5rem;
+}
+
+.book-preview h3:hover {
+    overflow: visible;
+    z-index: 1;
+    color: #ffffff;
+}
+
+/* is it ok to make a different file for this comp? because i want it to be "independent" */
+
+/* book-details */
+
+.book-details {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: lightskyblue; */
+    justify-content: space-between;
+}
+
+.review-btn {
+    background-color: lightsalmon;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+.review-btn:hover {
+    cursor: pointer;
+}
+
+.review-section {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-height: 600px;
+    overflow-y: auto;
+    width: 450px;
+    padding: 20px;
+    background-color: rgba(157, 189, 83, 0.876);
+}
+
+.review-section>* div {
+    display: flex;
+    justify-content: space-between;
+    margin-block-end: 1rem;
+    font-size: 1.4rem;
+}
+
+.review-text-area {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.review-section h3 {
+    font-size: 2rem;
+    margin-block-end: 1rem;
+}
+
+.reviews-display ul li h2 {
+    font-size: 2rem;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.reviews-display ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    text-align: center;
+    gap: 5px;
+}
+
+.reviews-list-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: lightskyblue;
+    border: 0px;
+    height: 25px;
+}
+
+.close-reviews {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: black;
+    background-color: lightskyblue;
+    border: 0px;
+    padding: 5px;
+}
+
+.book-details h2 {
+    margin: 3rem 0 3rem 0;
+    /* font-family: Garamond; */
+    font-size: 3rem;
+}
+
+.close-details {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: black;
+    background-color: lightskyblue;
+    border: 0px;
+    padding: 5px;
+}
+
+.details {
+    /* border: 1px solid black; */
+    padding: .875rem;
+    background-color: #c1d9d982;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.description {
+    background-color: linen;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+.description:hover {
+    cursor: pointer;
+}
+
+.details>*:not(:first-child) {
+    /* border-bottom: 2px dotted lightgrey; */
+}
+
+.details .book-price {
+    /* background-color: lightgreen; */
+    width: fit-content;
+    padding: .375rem;
+    border-radius: 50%;
+}
+
+.thumbnail {
+    display: flex;
+}
+
+.details-thumbnail-container {
+    display: flex;
+    gap: 20px;
+    /* flex-grow: 1; */
+}
+
+.details-thumbnail-container img {
+    width: 300px;
+}
+
+.negs-books-links {
+    display: flex;
+    gap: 30px;
+}
+
+.book-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2rem;
+    margin-block-start: 1rem;
+}
+
+.negs-books-links :first-child:active {
+    color: lightsalmon;
+}
+
+.negs-books-links :last-child:active {
+    color: lightseagreen;
+}
+
+.red {
+    background-color: #ff000045;
+}
+
+.green {
+    background-color: #90ee905c;
+}
+
+/* app-footer */
+
+.app-footer {
+    background-color: #c1d9d9;
+    text-align: center;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* user-msg */
+
+.user-msg {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    padding: 5px 20px 5px 10px;
+    ;
+    z-index: 1;
+    background-color: #e7e2e2;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.user-msg span {
+    padding-right: 10px;
+}
+
+.user-msg.success h4 {
+    color: rgb(37, 206, 37);
+}
+
+.user-msg.error h4 {
+    color: red;
+}
+
+.success {
+    border: 4px solid rgb(37, 206, 37);
+}
+
+.error {
+    border: 4px solid red;
+}
+
+.user-msg .close-msg {
+    color: #fff;
+    font-size: .45rem;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    padding: 3px;
+    border: 0px;
+}
+
+.user-msg a {
+    background-color: #fff;
+    color: rgb(37, 206, 37);
+    text-decoration: none;
+}
+
+.user-msg.success .close-msg {
+    background-color: rgb(37, 206, 37);
+    border-radius: 50%;
+}
+
+.user-msg.error .close-msg {
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* layout */
+
+/* is it ok to just place it on main? section */
+
+.main-layout {
+    max-width: 981px;
+    margin: auto;
+    /* border-right: 2px solid black;
+    border-left: 2px solid black; */
+}
+
+.app-main {
+    /* min-height: calc(100% - 80px); */
+    flex-grow: 1;
+}
+
+/* add-book */
+
+.open-add-book-section-btn:hover {
+    cursor: pointer;
+}
+
+.add-book-section {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-height: 600px;
+    overflow-y: auto;
+    height: 700px;
+    width: 700px;
+    padding: 20px;
+    background-color: rgba(157, 189, 83, 0.863);
+}
+
+/* .add-book-section form ul>*{ 
+} */
+
+.add-book-section li {
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.add-book-section form input {    
+    margin-bottom: 2rem;
+}
+
+.close-add-book-section-btn {
+    background-color: #ffffff;
+    border: 0px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: rgba(157, 189, 83, 0.863);
+}
+
+.add-book-btn {
+    background-color: #ffffff;
+    color: lightslategrey;
+    border: 0px;
+    height: 1rem;
+    border-radius: 50%;
+    /* flex crushes li bullets */
+    text-align: end;
+}
+
+/* links */
+
+/* how to fix with other links? */
+.app-header .router-link-active {
+    background-color: #cccecf;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+/* .active-link { */
+
+/* color: violet; */
+
+/* } */
